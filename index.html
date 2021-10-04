@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Cadastro de Filmes</title>
+  <link rel="stylesheet" href="style.css"/>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500&display=swap" rel="stylesheet">
+</head>
+<body>
+  <header class="header">
+    <h1>Cadastro de Filmes</h1>
+  </header>
+  <div class="container">
+    <form id="form" onSubmit="submitForm(event)">
+      <div>
+        <label id="nome-label" for="nome">Nome:</label>
+        <input id="nome" type="text" name="nome" placeholder="Digite o nome do Filme "required/>
+        <label id="url-label" for="url">Imagem:</label>
+        <input id="url" type="text" name="url" placeholder="Adicione a Url da imagem do filme" required/>
+      </div>
+      <div>
+        <label id="drop-label" for="dropdown">Genero:</label>
+        <select name="genero" id="dropdown">
+            <option class="option" disabled selected value> - </option>
+            <option class="option" value="terror">Terror</option>
+            <option class="option" value="açao">Ação</option>
+            <option class="option" value="anime">Anime</option>
+            <option class="option" value="musical">Musical</option>
+            <option class="option" value="drama">Drama</option>
+            <option class="option" value="medico">Médico</option>
+            <option class="option" value="suspense">Suspense</option>
+            <option class="option" value="ficção">Ficção</option>
+            <option class="option" value="comedia">Comédia</option>
+            <option class="option" value="policial">Policial</option>
+        </select>
+        <label id="nota-label" for="nota">Nota:</label>
+        <input id="nota" type="number" name="nota"placeholder="Nota de 0 a 10" min="0" max="10" required/>
+      </div>
+      <button id="submit" type="submit">Enviar</button>
+    </form>
+    <div id="card">
+      
+    </div>
+   </div> 
+<script src="index.js"></script>
+</body>
+</html>
